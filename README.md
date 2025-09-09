@@ -29,12 +29,8 @@ Este proyecto es una tienda online simple desarrollada en JavaScript puro, que p
 ## 📱 Ejemplo de mensaje generado por WhatsApp
 
 ```
-¡Hola! Me gustaría hacer un pedido con los siguientes productos:
-Cerveza x2 - $2000
+¡Hola! Me gustaría hacer un pedido con los siguientes productos: Botella 500ml x3 - $10500 Lata 473ml x3 - $12000 Chopera 20 lts x3 - $180000 Total: $202500 Por favor, ¿puedo recibir más detalles para finalizar mi compra?
 
-Total: $2000
-
-Por favor, ¿puedo recibir más detalles para finalizar mi compra?
 ```
 
 ## 🛠️ Instrucciones de uso
