@@ -1,0 +1,287 @@
+/* Resetea los márgenes y el padding en todos los elementos para evitar inconsistencias */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Asegura que el tamaño total de los elementos incluya el padding y los bordes */
+}
+
+/* Establece el fondo de la página con una imagen */
+body {
+    background-image: url("imágenes/fondo.png");
+    background-position: center center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-attachment: fixed; /* Fija la imagen de fondo cuando se hace scroll */
+}
+
+/* Establece el tamaño y la flotación de las imágenes */
+img {
+    width: 60px; /* Establece un tamaño fijo para las imágenes */
+    float: left; /* Hace que las imágenes floten a la izquierda */
+    padding: 0; /* Elimina el padding */
+}
+
+/* Estilo para el encabezado */
+header {
+    background: black; /* Color de fondo negro */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    clear: both; /* Limpia cualquier flotado previo */
+    content:''; /* Necesario para limpiar flotados */
+    display: table; /* Hace que el header se comporte como una tabla */
+}
+
+/* Estilo para la barra de navegación */
+nav {
+    float: center; /* Se busca centrar el menú */
+}
+
+/* Estilo para los elementos de lista dentro de la navegación */
+nav ul li {
+    list-style: none; /* Elimina los puntos de las listas */
+    margin-left: 100px; /* Espacio izquierdo entre elementos */
+    padding: 20px; /* Espaciado interior */
+    float: left; /* Flota los elementos de la lista a la izquierda */
+}
+
+/* Estilo para los enlaces dentro del menú */
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Color blanco para el texto */
+    font-weight: bold; /* Pone el texto en negrita */
+}
+
+/* Contenedor del menú, lo centra y establece un tamaño */
+.menu {
+    width: 1200px; /* Establece un tamaño fijo */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Efecto de hover sobre los elementos de la navegación */
+nav li:hover {
+    background-color: rgba(192, 192, 192, 0.192); /* Fondo gris claro al pasar el ratón */
+}
+
+/* Título principal con estilo personalizado */
+.titulo-principal-1 {
+    text-align: center; /* Centra el texto */
+    text-shadow: 10px 10px 10px black; /* Sombra de texto */
+    font-size: 100px; /* Tamaño de la fuente */
+    color: white; /* Color blanco */
+    font-family: "Roboto", sans-serif; /* Familia tipográfica */
+    font-weight: 600; /* Peso de la fuente */
+    font-style: normal; /* Estilo normal */
+}
+
+/* Título secundario con un estilo diferente */
+.titulo-principal-2 {
+    text-align: center;
+    text-shadow: 10px 10px 10px black;
+    font-size: 220px;
+    color: white;
+    font-family: "Yellowtail", cursive;
+    font-weight: 600;
+    font-style: normal;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s; /* Transición suave para cambios */
+}
+
+/* Títulos secundarios */
+.titulos {
+    text-align: center;
+    text-shadow: 10px 10px 10px black;
+    font-size: 80px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Estilo general para los textos */
+.textos {
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+    color: white;
+    font-size: xx-large;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-top: 50px; /* Espacio superior */
+}
+
+/* Estilo para textos de envío */
+.textos-envio {
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+    color: white;
+    font-size: x-large;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-top: 20px;
+}
+
+/* Habilita el desplazamiento suave en toda la página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para la sección "Nosotros" */
+.seccion-block-nosotros {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+/* Estilo para la sección "Estilos" */
+.seccion-block-estilos {
+    padding-top: 80px;
+}
+
+/* Estilo para la sección de contacto */
+.seccion-contacto {
+    padding-bottom: 10px;
+}
+
+/* Contenedor flexible para los botones de redes sociales */
+.contacto {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Estilo de los enlaces a redes sociales */
+.redes {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo de los íconos en los enlaces de redes sociales */
+.redes img {
+    width: 30px; /* Tamaño de los íconos */
+}
+
+/* Efecto hover en los enlaces de redes sociales */
+.redes:hover {
+    color: #ddd; /* Cambia el color al pasar el ratón */
+}
+
+.redes img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del ícono al pasar el ratón */
+    transition: 0.3s; /* Transición suave */
+}
+
+/* Estilo para la sección de horarios de atención */
+.horarios-atencion {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* Estilo para el subtítulo en la sección de horarios */
+.subtitulo {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Estilo de la tabla de horarios */
+.tabla-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+/* Estilo para las celdas de la tabla */
+.tabla-horarios td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilo para la primera columna de la tabla */
+.tabla-horarios td:first-child {
+    font-weight: bold;
+}
+
+/* Efecto hover en las filas de la tabla */
+.tabla-horarios tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo para el contenedor de las cartas */
+.contenedorCard {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+/* Estilo para las cartas de los estilos de cerveza */
+.card {
+    position: relative;
+    width: 170px;
+    height: 210px;
+    perspective: 1000px; /* Añadido para mejorar la perspectiva en el giro */
+}
+
+/* Estilo para las caras de las cartas */
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Evita mostrar el reverso al girar */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s; /* Añadido para animar la transformación */
+}
+
+/* Estilo para la cara frontal de la carta */
+.front {
+    transform: rotateY(0deg); /* Mantener en 0 para el frente */
+    box-shadow: 12px 10px 7px #000;
+}
+
+/* Estilo de las imágenes en las caras frontales */
+.front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para la cara trasera de las cartas */
+.back {
+    transform: rotateY(180deg); /* Mantener en 180 para que quede atrás */
+    background: linear-gradient(black, rgb(66, 66, 66));
+    padding: 10px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 12px 10px 10px #000;
+    font-size: 12px;
+}
+
+/* Efecto hover en las cartas */
+.card:hover .front {
+    transform: rotateY(180deg); /* Rota el frente cuando se pasa el mouse */
+}
+
+.card:hover .back {
+    transform: rotateY(360deg); /* Rota el reverso de manera opuesta para completar el giro */
+}

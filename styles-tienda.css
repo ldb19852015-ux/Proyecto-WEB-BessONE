@@ -1,0 +1,287 @@
+/* Reset de márgenes, rellenos y modelo de caja para asegurar consistencia entre navegadores */
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globales para el cuerpo de la página */
+body {
+    margin: 0 auto;
+    max-width: 1280px; /* Ancho máximo del body */
+    font-family: 'Lato'; /* Fuente predeterminada */
+    color: #333; /* Color de texto */
+}
+
+/* Estilo para el ícono del carrito */
+.icon-cart {
+    width: 40px;
+    height: 40px;
+    stroke: #000; /* Color del ícono */
+}
+
+/* Efecto de hover para el ícono del carrito */
+.icon-cart:hover {
+    cursor: pointer; /* Cambia el cursor a pointer */
+}
+
+/* Estilo para las imágenes dentro de los productos */
+img {
+    max-width: 100%;
+}
+
+/* Estilo para el header, que contiene el título y el icono del carrito */
+header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 30px 0 40px 0;
+}
+
+/* Contenedor relativo para el ícono del carrito */
+.container-icon {
+    position: relative;
+}
+
+/* Estilo para el contador de productos en el carrito */
+.count-products {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Tamaño de fuente del contador de productos */
+#contador-productos {
+    font-size: 12px;
+}
+
+/* Contenedor del carrito de compras, oculto por defecto */
+.container-cart-products {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Sombra para dar efecto de profundidad */
+    border-radius: 10px;
+}
+
+/* Estilo para cada producto en el carrito */
+.cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20); /* Línea divisoria entre productos */
+}
+
+/* Contenedor de la información de cada producto */
+.info-cart-product {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8; /* Toma el 80% del espacio disponible */
+}
+
+/* Títulos y precio de los productos en el carrito */
+.titulo-producto-carrito {
+    font-size: 20px;
+}
+
+.precio-producto-carrito {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Estilo para el ícono de eliminar producto del carrito */
+.icon-close {
+    width: 25px;
+    height: 25px;
+}
+
+/* Efecto hover en el ícono de eliminar */
+.icon-close:hover {
+    stroke: red; /* Cambia el color a rojo */
+    cursor: pointer;
+}
+
+/* Contenedor del total del carrito */
+.cart-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+/* Título "Total" en el carrito */
+.cart-total h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Monto total del carrito */
+.total-pagar {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+/* Clase para ocultar el carrito cuando está vacío */
+.hidden-cart {
+    display: none;
+}
+
+/* Estilo para la lista de productos */
+.container-items {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 60px;
+}
+
+/* Estilo para cada ítem (producto) en la tienda */
+.item {
+    border-radius: 10px;
+}
+
+/* Efecto hover para los productos */
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Sombra cuando se pasa el mouse */
+}
+
+/* Imagen de cada producto en la tienda */
+.item img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionarse */
+    border-radius: 10px 10px 0 0;
+    transition: all .4s;
+}
+
+/* Contenedor de la imagen (para ocultar el desbordamiento) */
+.item figure {
+    overflow: hidden;
+}
+
+/* Efecto de zoom en la imagen al hacer hover */
+.item:hover img {
+    transform: scale(1.2);
+}
+
+/* Contenedor de la información de cada producto */
+.info-product {
+    padding: 15px 15px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Precio de cada producto */
+.price {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* Estilo del botón para agregar al carrito */
+.info-product button {
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+/* Estilo para el mensaje de carrito vacío */
+.cart-empty {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilo para el botón de WhatsApp */
+.btn-whatsapp {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #25D366; /* Verde de WhatsApp */
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo para el botón dentro del enlace de WhatsApp */
+.btn-whatsapp button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Efecto hover para el botón de WhatsApp */
+.btn-whatsapp:hover {
+    background-color: #128C7E; /* Verde más oscuro de WhatsApp */
+}
+
+
+/* Responsive Design para tienda */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .container-cart-products {
+    width: 90%;
+    right: 5%;
+  }
+
+  .container-items {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 10px;
+  }
+
+  .item img {
+    height: auto;
+  }
+
+  .info-product button {
+    width: 100%;
+  }
+
+  .cart-product {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .info-cart-product {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
